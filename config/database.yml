@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: BBS_production
-  username: BBS
-  password: <%= ENV['BBS_DATABASE_PASSWORD'] %>
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
