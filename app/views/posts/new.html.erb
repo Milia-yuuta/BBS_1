@@ -1,0 +1,15 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      tag
+      <div class="article-tags-field">
+      <ul id="article-tags">
+      </ul>
+    </div>    
+      <%= render partial: "form", locals: { form: form } %>
+    <% end %>
+  </div>
+</div>
